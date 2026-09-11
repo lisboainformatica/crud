@@ -185,5 +185,5 @@ ng serve --open
 ---
 
 <div align="center">
-  <p>Projeto desenvolvido por <b>Lisboa Informática</b> como demonstração prática de habilidades Fullstack em Java & Angular.</p>
+  <p>Projeto desenvolvido por <b>Vinicius Andrade</b> como demonstração prática de habilidades Fullstack em Java & Angular.</p>
 </div>
