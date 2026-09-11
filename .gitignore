@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+target/
+**/target/
+dist/
+**/dist/
+tmp/
+**/tmp/
+out-tsc/
+**/out-tsc/
+.angular/
+**/.angular/
+
+# IDE / OS files
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
