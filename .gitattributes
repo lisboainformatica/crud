@@ -1,0 +1,17 @@
+# GitHub Linguist Configuration
+# Configuração para o GitHub reconhecer Java e TypeScript (Angular) como as linguagens principais
+
+# Marcar scripts de wrapper e arquivos gerados/vendored para não poluírem as estatísticas
+backend/mvnw linguist-vendored
+backend/mvnw.cmd linguist-vendored
+backend/.mvn/** linguist-vendored
+frontend/package-lock.json linguist-vendored
+
+# Desativar a contagem de estatísticas de linguagem para CSS e HTML
+*.css linguist-detectable=false
+*.scss linguist-detectable=false
+*.html linguist-detectable=false
+
+# Garantir a detecção correta de Java e TypeScript
+*.java linguist-language=Java linguist-detectable=true
+*.ts linguist-language=TypeScript linguist-detectable=true
