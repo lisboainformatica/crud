@@ -1,159 +1,189 @@
-# 🚀 Fullstack Task Manager — Projeto de Aprendizado & Treino
+# 💻 Fullstack Task Manager — Java (Spring Boot) & Angular
 
 <div align="center">
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![H2 Database](https://img.shields.io/badge/H2_Database-003545?style=for-the-badge&logo=database&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
+![Java 17](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot 3](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![Angular 17](https://img.shields.io/badge/Angular-17-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![H2 Database](https://img.shields.io/badge/H2-In--Memory-003545?style=for-the-badge&logo=database&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=for-the-badge)
 
 <p align="center">
-  <b>Um aplicativo completo de Gerenciamento de Tarefas (CRUD) criado com o propósito de praticar, evoluir e dominar o desenvolvimento Fullstack integrando Java (Spring Boot) no backend e Angular no frontend.</b>
+  <b>Projeto prático de desenvolvimento Fullstack focado em aplicação de Padrões de Projeto, Boas Práticas e Arquitetura de Software com Java Spring Boot e Angular.</b>
 </p>
 
 </div>
 
 ---
 
-## 🎯 Objetivo do Projeto
+## 📌 Sobre o Projeto
 
-Este repositório serve como um **laboratório prático de estudos** para aprimorar habilidades em:
-- **Backend com Java & Spring Boot**: Construção de APIs RESTful limpas, arquitetura em camadas (Controller, Service, Repository, Entity), persistência com Spring Data JPA, validação de DTOs e banco de dados em memória (H2).
-- **Frontend com Angular**: Criação de interfaces modernas e reativas usando Componentes Standalone, integração via `HttpClient` (RxJS), formulários reativos/reativos com `FormsModule`, filtros dinâmicos e métricas de desempenho em tempo real.
-- **Integração Fullstack & CORS**: Comunicação HTTP fluida entre cliente e servidor com tratamento robusto de erros.
+Este projeto foi desenvolvido com foco no **aprendizado prático e consolidação de conhecimentos em engenharia de software fullstack**. Tratase de um gerenciador de tarefas (To-Do List / Task Manager) completo, integrando um backend em **Java 17 / Spring Boot 3** a um frontend reativo em **Angular 17**.
 
----
-
-## ✨ Funcionalidades
-
-- 📝 **CRUD Completo de Tarefas**: Criar, visualizar, editar e excluir tarefas.
-- ✅ **Alternância Rápida de Status**: Marcar/desmarcar tarefas como concluídas com 1 clique (Patch).
-- 🏷️ **Níveis de Prioridade**: Suporte a prioridades (`BAIXA`, `MÉDIA`, `ALTA`) com identificação visual.
-- 📅 **Datas de Vencimento**: Agendamento e acompanhamento de prazos de entrega.
-- 🔍 **Filtros e Busca em Tempo Real**: Filtrar por palavra-chave no título/descrição, por status (Todas, Pendentes, Concluídas) e por prioridade.
-- 📊 **Dashboard de Métricas**: Painel estatístico que exibe total de tarefas, pendentes, concluídas e barra de progresso em porcentagem.
-- 🔔 **Notificações Toast**: Feedback visual instantâneo para todas as ações do usuário.
+Além da funcionalidade de CRUD completo, o projeto explora conceitos essenciais de desenvolvimento moderno, como **arquitetura em camadas**, **injeção de dependência**, **programação reativa com RxJS**, **validação de dados** e **filtros dinâmicos**.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🧠 Conceitos e Competências Aprendidas
 
-### **Backend (Spring Boot)**
-* **Linguagem**: Java
-* **Framework**: Spring Boot 3
-* **Persistência**: Spring Data JPA / Hibernate
-* **Banco de Dados**: H2 Database (em memória)
-* **Validação**: Jakarta Validation
-* **Ferramenta de Build**: Maven
+### ☕ Backend (Java & Spring Boot)
+- **Arquitetura em Camadas (Layered Architecture)**: Separação clara de responsabilidades entre `Controller`, `Service`, `Repository` e `Entity`.
+- **Inversão de Controle e Injeção de Dependência (IoC / DI)**: Gerenciamento de beans via container do Spring (`@Service`, `@RestController`, `@Autowired`/Construtores).
+- **Mapeamento Objeto-Relacional (ORM / JPA)**: Mapeamento de entidades com JPA/Hibernate, uso de `@Entity`, `@Table`, `@Enumerated(EnumType.STRING)` e hooks `@PrePersist`.
+- **Repository Pattern**: Abstração do acesso a dados utilizando `JpaRepository` com suporte a query methods customizados.
+- **Tratamento de Exceções e Validação**: Validação sintática nos DTOs/Entities usando Jakarta Validation (`@NotBlank`, `@Valid`) e tratamento adequado de códigos HTTP (`200 OK`, `201 Created`, `204 No Content`, `404 Not Found`).
+- **Configuração de CORS**: Liberação granular de origens para permitir comunicação segura com a aplicação cliente em Angular.
 
-### **Frontend (Angular)**
-* **Framework**: Angular 17+ (Standalone Components)
-* **Linguagem**: TypeScript
-* **Estilização**: CSS3 Moderno (CSS Variables, Flexbox, Glassmorphism design)
-* **Comunicação HTTP**: Angular HttpClient & RxJS
+### 🅰️ Frontend (Angular & TypeScript)
+- **Standalone Components**: Uso da abordagem moderna do Angular sem necessidade de `NgModule`.
+- **Programação Reativa com RxJS**: Manipulação de fluxos assíncronos de dados via `Observable`, `subscribe` e operadores de transformação.
+- **Consumo de APIs REST**: Centralização das chamadas HTTP em um `TaskService` injetável (`HttpClient`).
+- **Gerenciamento de Estado do Componente**: Manipulação e filtragem em tempo real no cliente (busca por texto, filtro por prioridade e por status).
+- **Data Binding**: Utilização de Two-way data binding (`[(ngModel)]`), Property Binding (`[ngClass]`) e Event Binding.
 
 ---
 
-## 📁 Estrutura do Repositório
+## 🏗️ Padrões de Projeto e Arquitetura
 
-```text
-crud/
-├── backend/                  # API REST em Spring Boot
-│   ├── src/main/java/        # Código fonte Java (Controllers, Services, Models, Repositories)
-│   ├── src/main/resources/   # Configurações do Spring (application.properties)
-│   └── pom.xml               # Dependências do Maven
-│
-├── frontend/                 # Aplicação Angular
-│   ├── src/app/              # Componentes, Modelos e Serviços
-│   ├── angular.json          # Configurações do Angular
-│   └── package.json          # Dependências do Node.js
-│
-└── README.md                 # Documentação do projeto
+```mermaid
+graph TD
+    subgraph Frontend [Angular Client - Port 4200]
+        UI[AppComponent / Templates] <--> Service[TaskService - HttpClient]
+    end
+
+    subgraph Backend [Spring Boot API - Port 8080]
+        Controller[TaskController] <--> TaskService[TaskService Layer]
+        TaskService <--> Repo[TaskRepository]
+        Repo <--> DB[(H2 In-Memory Database)]
+    end
+
+    Service <-->|REST / JSON HTTP| Controller
+```
+
+### 💎 Principais Design Patterns Aplicados:
+1. **Layered Architecture Pattern**: Organização estrutural em camadas isoladas para manter alta coesão e baixo acoplamento.
+2. **Repository Pattern**: Desacoplamento da camada de negócios da tecnologia de persistência.
+3. **DTO (Data Transfer Object) Pattern**: Transferência enxuta de dados entre o cliente Angular e a API Java.
+4. **Singleton Pattern**: Instâncias de serviços gerenciadas pelo container de DI do Spring e pelo `providedIn: 'root'` do Angular.
+
+---
+
+## 🔍 Destaques de Código
+
+### 1. Controller REST (Spring Boot)
+Trecho demonstrando injeção via construtor, manipulação de `ResponseEntity` e parâmetros opcionais de busca:
+
+```java
+@RestController
+@RequestMapping("/api/tasks")
+@CrossOrigin(origins = {"http://localhost:4200", "*"})
+public class TaskController {
+
+    private final TaskService taskService;
+
+    public TaskController(TaskService taskService) {
+        this.taskService = taskService;
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Task>> getAllTasks(
+            @RequestParam(required = false) Boolean completed,
+            @RequestParam(required = false) Priority priority) {
+        if (completed != null) {
+            return ResponseEntity.ok(taskService.getTasksByStatus(completed));
+        }
+        if (priority != null) {
+            return ResponseEntity.ok(taskService.getTasksByPriority(priority));
+        }
+        return ResponseEntity.ok(taskService.getAllTasks());
+    }
+}
+```
+
+### 2. Serviço Angular Reativo (TypeScript + RxJS)
+Centralização da comunicação assíncrona com tratamento tipado:
+
+```typescript
+@Injectable({
+  providedIn: 'root'
+})
+export class TaskService {
+  private apiUrl = 'http://localhost:8080/api/tasks';
+
+  constructor(private http: HttpClient) {}
+
+  getTasks(): Observable<Task[]> {
+    return this.http.get<Task[]>(this.apiUrl);
+  }
+
+  toggleTaskStatus(id: number): Observable<Task> {
+    return this.http.patch<Task>(`${this.apiUrl}/${id}/toggle`, {});
+  }
+}
 ```
 
 ---
 
-## 🚦 Como Executar o Projeto
+## 🛠️ Tecnologias e Ferramentas
+
+| Camada | Tecnologia | Utilização |
+| :--- | :--- | :--- |
+| **Backend** | Java 17 | Linguagem principal do servidor |
+| **Backend** | Spring Boot 3 | Framework para criação de APIs REST |
+| **Backend** | Spring Data JPA | Abstração de persistência no banco |
+| **Backend** | H2 Database | Banco de dados SQL em memória para desenvolvimento |
+| **Frontend** | Angular 17 | Framework SPA para interface do usuário |
+| **Frontend** | TypeScript | Superset tipado para lógica do cliente |
+| **Frontend** | RxJS & HttpClient | Comunicação HTTP assíncrona e reativa |
+| **Frontend** | Vanilla CSS3 | Estilização moderna com Flexbox e variáveis CSS |
+
+---
+
+## 🚦 Como Executar o Projeto Localmente
 
 ### Pré-requisitos
-Antes de começar, certifique-se de ter instalado em sua máquina:
-- **Java JDK 17+**
-- **Node.js 18+** e **npm**
-- **Angular CLI** (`npm install -g @angular/cli`)
-- **Git**
+- Java JDK 17 ou superior
+- Node.js 18+ e npm
+- Angular CLI (`npm install -g @angular/cli`)
 
----
+### Step-by-Step
 
-### 1. Clonar o Repositório
 ```bash
+# 1. Clonar o repositório
 git clone https://github.com/lisboainformatica/crud.git
 cd crud
-```
 
----
-
-### 2. Executar o Backend (Spring Boot)
-
-```bash
-# Entre na pasta do backend
+# 2. Iniciar o Backend (Spring Boot)
 cd backend
+./mvnw spring-boot:run   # No Windows: .\mvnw.cmd spring-boot:run
 
-# Execute a aplicação usando Maven Wrapper
-# No Windows PowerShell / CMD:
-.\mvnw.cmd spring-boot:run
+# O servidor rodará em http://localhost:8080
+# H2 Console disponível em http://localhost:8080/h2-console
 
-# No Linux / macOS:
-./mvnw spring-boot:run
-```
-O servidor backend iniciará na porta **8080**:
-- **API Base**: `http://localhost:8080/api/tasks`
-- **Console do Banco H2**: `http://localhost:8080/h2-console` *(JDBC URL: `jdbc:h2:mem:tododb`, Usuário: `sa`, Senha: em branco)*
-
----
-
-### 3. Executar o Frontend (Angular)
-
-Abra um novo terminal e execute:
-
-```bash
-# Entre na pasta do frontend
-cd frontend
-
-# Instale as dependências do Node.js
+# 3. Iniciar o Frontend (Angular) - em outro terminal
+cd ../frontend
 npm install
-
-# Inicie o servidor de desenvolvimento do Angular
 ng serve --open
+
+# A aplicação abrirá em http://localhost:4200
 ```
-A aplicação abrirá automaticamente no seu navegador em `http://localhost:4200`.
 
 ---
 
-## 🌐 Endpoints da API REST
+## 📬 Endpoints da API REST
 
-| Método | Endpoint | Descrição |
-| :--- | :--- | :--- |
-| `GET` | `/api/tasks` | Lista todas as tarefas (suporta query params `completed` e `priority`) |
-| `GET` | `/api/tasks/{id}` | Busca uma tarefa específica por ID |
-| `POST` | `/api/tasks` | Cria uma nova tarefa |
-| `PUT` | `/api/tasks/{id}` | Atualiza uma tarefa existente |
-| `PATCH` | `/api/tasks/{id}/toggle` | Alterna o status da tarefa (Concluída/Pendente) |
-| `DELETE` | `/api/tasks/{id}` | Remove uma tarefa |
-
----
-
-## 💡 Aprendizados & Evolução
-
-Construir este projeto possibilitou colocar em prática conceitos fundamentais de desenvolvimento de software:
-
-1. **Separação de Responsabilidades**: Arquitetura desacoplada onde o backend cuida puramente das regras de negócio e dados, e o frontend entrega uma experiência fluida ao usuário.
-2. **Reatividade no Angular**: Uso de RxJS Observables para lidar com requisições assíncronas e atualização reativa de estados.
-3. **Qualidade e Estilização**: Criação de interfaces elegantes com UI intuitiva, responsiva e acessível.
+| Método | Endpoint | Descrição | Status HTTP |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/api/tasks` | Retorna lista de tarefas (filtro opcional por `completed` e `priority`) | `200 OK` |
+| `GET` | `/api/tasks/{id}` | Busca tarefa por ID | `200 OK` / `404 Not Found` |
+| `POST` | `/api/tasks` | Cadastra nova tarefa | `201 Created` |
+| `PUT` | `/api/tasks/{id}` | Atualiza todos os dados de uma tarefa | `200 OK` / `404 Not Found` |
+| `PATCH` | `/api/tasks/{id}/toggle` | Alterna o status da tarefa (concluída/pendente) | `200 OK` / `404 Not Found` |
+| `DELETE` | `/api/tasks/{id}` | Remove uma tarefa do sistema | `204 No Content` |
 
 ---
 
 <div align="center">
-  <p>Desenvolvido com 💙 como parte da jornada de aprendizado em <b>Java</b> & <b>Angular</b>.</p>
+  <p>Projeto desenvolvido por <b>Lisboa Informática</b> como demonstração prática de habilidades Fullstack em Java & Angular.</p>
 </div>
